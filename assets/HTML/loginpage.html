@@ -3,19 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Log In | Mercato.com</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>Login to Mercato</h1>
-    <p>Please enter your credentials to access your account.</p>
-    <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
+    <!-- NAV -->
+    <nav>
+        <ul class="nav__main">
+            <li><a class="navlink" href="index.html">Home</a></li>
+            <li><a class="navlink" href="">About</a></li>
+            <li><a class="navlink" href="">Contact</a></li>
+        </ul>
+        <ul class="nav__auth">
+            <li><a class="navlink navlink--auth" href="loginpage.html">Log In</a></li>
+            <li><a class="navlink navlink--auth navlink--primary" href="signuppage.html">Sign Up</a></li>
+        </ul>
+    </nav>
 
-        <input type="submit" value="Login">
-    </form>
+    <!-- LOGIN FORM -->
+    <div class="auth-wrap">
+        <div class="auth-card">
+            <div class="auth-card__badge">M</div>
+            <h1>Welcome back</h1>
+            <p class="auth-card__subtext">Log in to continue shopping on Mercato.</p>
+
+            <form class="auth-form" novalidate>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+                <span class="field-error" id="username-error"></span>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <span class="field-error" id="password-error"></span>
+
+                <input type="submit" value="Log In" class="btn-auth-submit">
+            </form>
+
+            <p class="auth-card__switch">Don't have an account? <a href="signuppage.html">Sign up</a></p>
+        </div>
+    </div>
+
+    <footer>2026 Mercato.com. All rights reserved.</footer>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>

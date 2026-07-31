@@ -1,97 +1,204 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mercato.com</title>
-    <link rel="stylesheet" href="../css/merc.css">
-
-
-    
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
 
-     <nav>
-        <ul>
-            <li >  <a class="navlink" href="">Home</a> </li>
-            <li> <a class="navlink" href="">About</a></li>
-            <li><a  class="navlink" href="">Contact</a></li>
-        </ul>
+    <!-- NAV -->
+    <nav>
+        <button id="navToggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+
+        <div class="nav__links" id="navLinks">
+            <ul class="nav__main">
+                <li><a class="navlink" href="index.html">Home</a></li>
+                <li><a class="navlink" href="">About</a></li>
+                <li><a class="navlink" href="">Contact</a></li>
+            </ul>
+            <ul class="nav__auth">
+                <li class="nav__cart">
+                    <button id="cartToggle" class="cart-btn" aria-label="View cart">
+                        🛒 <span id="cartCount" class="cart-badge">0</span>
+                    </button>
+                    <div id="cartPanel" class="cart-panel hidden">
+                        <h4>Your Cart</h4>
+                        <ul id="cartItems" class="cart-items"></ul>
+                        <div class="cart-total">Total: <span id="cartTotal">ETB 0</span></div>
+                    </div>
+                </li>
+                <li><a class="navlink navlink--auth" href="loginpage.html">Log In</a></li>
+                <li><a class="navlink navlink--auth navlink--primary" href="signuppage.html">Sign Up</a></li>
+            </ul>
+        </div>
     </nav>
 
     <h1>Welcome to Mercato.com</h1>
-
     <p>Your one-stop shop for all your needs!</p>
 
-    
-    <p>new here? <a href="signuppage.html">Sign up</a> today!</p>
-
-    <p>Already have an account? <a href="loginpage.html">Log in</a> to access your personalized dashboard.</p>
-    <div>
-        <details><summary>Mens</summary><p>
-            These are the  list of the  mens fashion clothes
-        </P></details>
-   <div>
-    <img src="../images/watch.png" alt="coffee" width="130" height="130">
-    <img src="../images/shoe.png" alt="coffee" width="130" height="130"></div>  
-    <img src="../images/cr.png" alt="coffee" width="130" height="130">
-    <div>  
-     <img src="../images/buna.png" alt="coffee" width="150" height="150">
-    <img src="../images/game.png" alt="coffee" width="150" height="150"></div>
-    <img src="../images/pc.png" alt="coffee" width="150" height="150">
-    
-    </div>
-    <p>Explore our wide range of products and services!</p>
-
-    <div>
-        <select>
-            <option>All</option>
-            <option>Electronics</option>
-            <option>Fashion</option>
-            <option>Home & Garden</option>
-            <Option>Sports & Outdoors</option>
-            <optgroup label="More Categories">
-                <option>Health & Beauty</option>
-                <option>Automotive</option>
-                <option>Books and Media</option>    
+    <!-- FILTER BAR -->
+    <div class="filter-bar">
+        <select class="filter-bar__category" id="filterCategory">
+            <option value="all">All Categories</option>
+            <option value="fashion">Fashion</option>
+            <option value="electronics">Electronics</option>
+            <option value="food">Food & Drink</option>
+            <option value="gaming">Gaming</option>
         </select>
-
-        <input type="text" placeholder="Search Mercato">
+        <input type="text" class="filter-bar__search" id="filterSearch" placeholder="Search products...">
+        <button class="filter-bar__button" id="filterButton">Search</button>
     </div>
 
+    <!-- PRODUCT GRID -->
+    <section class="products">
 
-</section>
+        <h2 class="products__heading">Featured Products</h2>
 
+        <p id="noResults" class="no-results hidden">No products match your search.</p>
 
-    <section class="sec" id="sec4"> 
-        <div class="contact">
-         contact
+        <div class="product-grid" id="productGrid">
+
+            <article class="product-card" data-category="fashion">
+                <div class="product-card__image-wrap">
+                    <img src="../images/kemis.webp" alt="Habesha kemis" class="product-card__image">
+                </div>
+                <h3 class="product-card__name">Habesha kemis</h3>
+                <p class="product-card__rating"><span class="stars">★★★★☆</span> <span class="rating-count">(128)</span></p>
+                <p class="product-card__price">ETB 4999</p>
+                <button class="btn-add-cart">Add to Cart</button>
+            </article>
+
+            <article class="product-card" data-category="fashion">
+                <div class="product-card__image-wrap">
+                    <img src="../images/mesinko.webp" alt="Masinko" class="product-card__image">
+                </div>
+                <h3 class="product-card__name">Masinko</h3>
+                <p class="product-card__rating"><span class="stars">★★★★★</span> <span class="rating-count">(342)</span></p>
+                <p class="product-card__price">ETB 2,499</p>
+                <button class="btn-add-cart">Add to Cart</button>
+            </article>
+
+            <article class="product-card" data-category="fashion">
+                <div class="product-card__image-wrap">
+                    <img src="../images/food.webp" alt="Doro wat" class="product-card__image">
+                </div>
+                <h3 class="product-card__name">Doro wat</h3>
+                <p class="product-card__rating"><span class="stars">★★★★☆</span> <span class="rating-count">(56)</span></p>
+                <p class="product-card__price">ETB 899</p>
+                <button class="btn-add-cart">Add to Cart</button>
+            </article>
+
+            <article class="product-card" data-category="food">
+                <div class="product-card__image-wrap">
+                    <img src="../images/coffee.webp" alt="Ethiopian coffee beans" class="product-card__image">
+                </div>
+                <h3 class="product-card__name">Ethiopian Coffee Beans</h3>
+                <p class="product-card__rating"><span class="stars">★★★★★</span> <span class="rating-count">(215)</span></p>
+                <p class="product-card__price">ETB 1000</p>
+                <button class="btn-add-cart">Add to Cart</button>
+            </article>
+
+            <article class="product-card" data-category="gaming">
+                <div class="product-card__image-wrap">
+                    <img src="../images/decor.avif" alt="Traditional home decor" class="product-card__image">
+                </div>
+                <h3 class="product-card__name">Traditional Home Decor</h3>
+                <p class="product-card__rating"><span class="stars">★★★★☆</span> <span class="rating-count">(89)</span></p>
+                <p class="product-card__price">ETB 6,200</p>
+                <button class="btn-add-cart">Add to Cart</button>
+            </article>
+
+            <article class="product-card" data-category="electronics">
+                <div class="product-card__image-wrap">
+                    <img src="../images/shoe.webp" alt="Anbessa Chema" class="product-card__image">
+                </div>
+                <h3 class="product-card__name">Anbessa Chema</h3>
+                <p class="product-card__rating"><span class="stars">★★★★☆</span> <span class="rating-count">(47)</span></p>
+                <p class="product-card__price">ETB 3,000</p>
+                <button class="btn-add-cart">Add to Cart</button>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS -->
+    <section class="reviews">
+        <h2 class="reviews__heading">Customer Reviews</h2>
+
+        <div class="review-list">
+
+            <article class="review-card">
+                <div class="review-card__top">
+                    <span class="review-card__name">Selam T.</span>
+                    <span class="stars">★★★★★</span>
+                </div>
+                <p class="review-card__text">Fast delivery and the coffee beans were incredibly fresh. Will order again!</p>
+            </article>
+
+            <article class="review-card">
+                <div class="review-card__top">
+                    <span class="review-card__name">Biruk M.</span>
+                    <span class="stars">★★★★☆</span>
+                </div>
+                <p class="review-card__text">Good quality kemis for the price. Packaging could be better.</p>
+            </article>
+
+            <article class="review-card">
+                <div class="review-card__top">
+                    <span class="review-card__name">Hana G.</span>
+                    <span class="stars">★★★★★</span>
+                </div>
+                <p class="review-card__text">Exactly what I was looking for. Customer service was very responsive too.</p>
+            </article>
+
         </div>
 
-        <div class="phone"> 
-            <img id="phoneicon" src="../images/phone.png" alt="phone icon">
-           <div class="number"> +251-0714258950</div>
-    
+        <!-- REVIEW FORM -->
+        <div class="review-form">
+            <h3 class="review-form__heading">Leave Your Feedback</h3>
 
+            <form id="reviewForm" novalidate>
+                <label for="review-name">Name</label>
+                <input type="text" id="review-name" name="review-name" placeholder="Your name">
+                <span class="field-error" id="review-name-error"></span>
+
+                <label for="review-product">Which product?</label>
+                <select id="review-product" name="review-product">
+                    <option>Habesha kemis</option>
+                    <option>Masinko</option>
+                    <option>Doro wat</option>
+                    <option>Ethiopian Coffee Beans</option>
+                    <option>Traditional Home Decor</option>
+                    <option>Anbessa Chema</option>
+                </select>
+
+                <label>Rating</label>
+                <div class="star-picker" id="starPicker">
+                    <span class="star-picker__star" data-value="1">★</span>
+                    <span class="star-picker__star" data-value="2">★</span>
+                    <span class="star-picker__star" data-value="3">★</span>
+                    <span class="star-picker__star" data-value="4">★</span>
+                    <span class="star-picker__star" data-value="5">★</span>
+                </div>
+                <input type="hidden" id="review-rating" name="review-rating" value="5">
+
+                <label for="review-comment">Your Review</label>
+                <textarea id="review-comment" name="review-comment" rows="4" placeholder="Tell us what you thought..."></textarea>
+                <span class="field-error" id="review-comment-error"></span>
+
+                <button type="submit" class="btn-submit-review">Submit Review</button>
+                <p class="form-success hidden" id="reviewSuccess">Thanks! Your review was submitted.</p>
+            </form>
         </div>
+    </section>
 
-        <div class="email"> 
-             <img id="emailicon" src="../images/email.png" alt="Email">
-             <a href="mailto:fokorachala@gmail.com">mail</a>
+    <footer>2026 Mercato.com. All rights reserved.</footer>
 
-        </div>
-
-        <div class="telegram">
-
-              <img id="telegramicon" src="../images/telegram.png" alt="Telegram">
-            <a href="https://t.me/patron125" target="_blank">Telegram</a>
-
-
-        </div>
-        
-    </section>    
-<footer>2026 Mercato.com. All rights reserved.</footer>
-    
+    <script src="../js/script.js"></script>
 </body>
 </html>

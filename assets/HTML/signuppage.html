@@ -3,23 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign Up | Mercato.com</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-    <h1>Welcome to  Mercato</h1>
-    <p>Please fill out the form below to create an account.</p>
-    <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
+    <!-- NAV -->
+    <nav>
+        <ul class="nav__main">
+            <li><a class="navlink" href="index.html">Home</a></li>
+            <li><a class="navlink" href="">About</a></li>
+            <li><a class="navlink" href="">Contact</a></li>
+        </ul>
+        <ul class="nav__auth">
+            <li><a class="navlink navlink--auth" href="loginpage.html">Log In</a></li>
+            <li><a class="navlink navlink--auth navlink--primary" href="signuppage.html">Sign Up</a></li>
+        </ul>
+    </nav>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+    <!-- SIGNUP FORM -->
+    <div class="auth-wrap">
+        <div class="auth-card">
+            <div class="auth-card__badge">M</div>
+            <h1>Create your account</h1>
+            <p class="auth-card__subtext">Join Mercato and start shopping today.</p>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
+            <form class="auth-form" novalidate>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Choose a username">
+                <span class="field-error" id="username-error"></span>
 
-        <input type="submit" value="Sign Up">
-    
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com">
+                <span class="field-error" id="email-error"></span>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password">
+                <span class="auth-form__hint">Use at least 8 characters.</span>
+                <span class="field-error" id="password-error"></span>
+
+                <input type="submit" value="Sign Up" class="btn-auth-submit">
+            </form>
+
+            <p class="auth-card__switch">Already have an account? <a href="loginpage.html">Log in</a></p>
+        </div>
+    </div>
+
+    <footer>2026 Mercato.com. All rights reserved.</footer>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>
