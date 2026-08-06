@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Habesha kemis",
+    "price": 4999,
+    "rating": 4,
+    "reviewCount": 128,
+    "category": "fashion",
+    "image": "../images/kemis.webp"
+  },
+  {
+    "name": "Masinko",
+    "price": 2499,
+    "rating": 5,
+    "reviewCount": 342,
+    "category": "music",
+    "image": "../images/mesinko.webp"
+  },
+  {
+    "name": "Doro wat",
+    "price": 899,
+    "rating": 4,
+    "reviewCount": 56,
+    "category": "food",
+    "image": "../images/food.webp"
+  },
+  {
+    "name": "Ethiopian Coffee Beans",
+    "price": 1000,
+    "rating": 5,
+    "reviewCount": 215,
+    "category": "coffee",
+    "image": "../images/coffee.webp"
+  },
+  {
+    "name": "Traditional Home Decor",
+    "price": 6200,
+    "rating": 4,
+    "reviewCount": 89,
+    "category": "art",
+    "image": "../images/decor.avif"
+  },
+  {
+    "name": "Anbessa Chema",
+    "price": 3000,
+    "rating": 4,
+    "reviewCount": 47,
+    "category": "shoes",
+    "image": "../images/shoe.webp"
+  },
+  {
+    "name": "Rubik's Cube",
+    "price": 600,
+    "rating": 4,
+    "reviewCount": 89,
+    "category": "art",
+    "image": "../images/rubik.webp"
+  }
+]
