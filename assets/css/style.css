@@ -17,7 +17,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(270deg, #26215C, #7F77DD, #26215C);
+  background: linear-gradient(270deg, #26215C, #7c73df, #262161);
   background-size: 400% 400%;
   animation: shift 8s ease infinite;
   padding: 10px 1.5rem;
