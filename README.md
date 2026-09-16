@@ -1,12 +1,11 @@
 # Mercato
 
-Mercato is a simple e-commerce web application built to demonstrate core online shopping functionality, including product browsing, search, filtering, shopping cart management, and user interface pages.
+Mercato is a simple e-commerce web application built to demonstrate core online shopping functionality, including product browsing, search, filtering, shopping cart management pages.
 
 ## Tech Stack
 
 * **Frontend:** HTML, CSS, JavaScript
-* **Backend:** Node.js, Express.js
-* **Storage:** Browser LocalStorage
+
 
 ## Features
 
