@@ -2,12 +2,12 @@
 
 Mercato is a simple e-commerce web application built to demonstrate core online shopping functionality, including product browsing, search, filtering, shopping cart management pages.
 
-## Tech Stack
+# Tech Stack
 
 * **Frontend:** HTML, CSS, JavaScript
 
 
-## Features
+# Features
 
 * Product browsing and categorization
 * Product search and filtering
@@ -17,10 +17,10 @@ Mercato is a simple e-commerce web application built to demonstrate core online 
 * Responsive design
 * Basic Express.js REST API
 
-## Project Status
+# Project Status
 
 Mercato is currently a **prototype/learning project**. Authentication, database integration, payments, and order management are planned for future development.
 
-## Author
+# Author
 
 **Chala** — [GitHub](https://github.com/chala-tech)
